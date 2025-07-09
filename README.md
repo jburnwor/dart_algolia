@@ -1,3 +1,21 @@
+Hi Team,
+
+I wanted to give you all a heads-up regarding the Dart package I created for Algolia. Going forward, I won’t be able to offer any further support or development for it. If anyone’s interested in forking it or continuing work independently, please feel free—you’re absolutely welcome to.
+
+Right now, my priorities are focused elsewhere, particularly on projects that are part of my paid work. Unfortunately, this package doesn’t fall into that category, so I need to allocate my time accordingly.
+
+Also, it’s worth mentioning that Algolia has since released their own official Dart package. I believe that should be a solid path forward for most use cases. In the past, they had referenced my package in their documentation and even reached out to me directly, promising a small token of appreciation (a welcome kit, as they described). I shared my details with them at the time, but I never received anything—nor was there any follow-up or continued communication.
+
+I even suggested that they consider contributing directly to this project or possibly taking it under their official umbrella, but that conversation didn’t go anywhere. The silence from their side was disheartening, especially given how this package helped fill a gap in their Flutter ecosystem when no official support existed.
+
+I had much more planned for it—like extended diagnostics, an Alogila UI Package (which would be highly configurable), and more flexible integrations. But with no acknowledgment, and with their preference shifting toward native Android/iOS SDKs over the Dart-based approach I took, it doesn’t seem worthwhile to push further without backing.
+
+So, unless something changes, I’ll be stepping away from this package. If you believe there’s still potential or would like to build on it, I’m happy to see others carry it forward.
+
+Thanks for understanding.
+
+---
+
 # Algolia Search (Dart Client)
 
 ![Algolia](https://res.cloudinary.com/hilnmyskv/image/upload/q_auto/v1614950376/Algolia_com_Website_assets/images/shared/algolia_logo/logo-algolia-nebula-blue-full.svg 'Algolia')
