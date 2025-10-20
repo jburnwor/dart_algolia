@@ -1,26 +1,37 @@
 import 'package:algolia/algolia.dart';
-import 'package:dotenv/dotenv.dart' show load, env;
+//import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:dotenv/dotenv.dart';
 
 // ignore: invalid_annotation_target
 @Timeout(Duration(seconds: 60))
 import 'package:test/test.dart';
 
+DotEnv env = DotEnv();
+
 class Application {
   static Algolia get algolia {
-    load();
+    //load();
+    env.load();
     return Algolia.init(
-      applicationId: env['ALGOLIA_APP_ID']?.toString() ?? '',
-      apiKey: env['ALGOLIA_API_KEY']?.toString() ?? '',
+      applicationId: env['ALGOLIA_APP_ID']?.toString() ?? '',//applicationId: dotenv.env['ALGOLIA_APP_ID']?.toString() ?? '',
+      apiKey: env['ALGOLIA_API_KEY']?.toString() ?? '',//apiKey: dotenv.env['ALGOLIA_API_KEY']?.toString() ?? '',
     );
   }
 }
 
+//late Algolia algolia;
+
 void main() async {
+  // setUpAll(() async {
+  //   await dotenv.load();
+  //   algolia = Application.algolia;
+  // });
+
   test('Test Environment For Key', () {
     print('ALGOLIA_APP_ID: ' + env['ALGOLIA_APP_ID'].toString());
     print('ALGOLIA_API_KEY: ' + env['ALGOLIA_API_KEY'].toString());
-    expect(env['ALGOLIA_APP_ID'].runtimeType, String);
-    expect(env['ALGOLIA_API_KEY'].runtimeType, String);
+    expect(env['ALGOLIA_APP_ID'].runtimeType, String);//expect(dotenv.env['ALGOLIA_APP_ID'].runtimeType, String);
+    expect(env['ALGOLIA_API_KEY'].runtimeType, String);//expect(dotenv.env['ALGOLIA_API_KEY'].runtimeType, String);
   });
 
   // Initiate Algolia in your project
